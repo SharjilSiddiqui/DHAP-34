@@ -1,0 +1,20 @@
+[2025-11-21T08:14:27.781+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-11-21T08:14:28.367+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: load_email_thread_data.load_email_data manual__2025-11-21T08:14:08.465273+00:00 [queued]>
+[2025-11-21T08:14:28.405+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: load_email_thread_data.load_email_data manual__2025-11-21T08:14:08.465273+00:00 [queued]>
+[2025-11-21T08:14:28.413+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-11-21T08:14:28.559+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): load_email_data> on 2025-11-21 08:14:08.465273+00:00
+[2025-11-21T08:14:28.598+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=84) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-11-21T08:14:28.614+0000] {standard_task_runner.py:63} INFO - Started process 92 to run task
+[2025-11-21T08:14:28.614+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'load_email_thread_data', 'load_email_data', 'manual__2025-11-21T08:14:08.465273+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/extraction/email_threads/load_email_threads.py', '--cfg-path', '/tmp/tmpdx4v_sbx']
+[2025-11-21T08:14:28.620+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask load_email_data
+[2025-11-21T08:14:32.423+0000] {task_command.py:426} INFO - Running <TaskInstance: load_email_thread_data.load_email_data manual__2025-11-21T08:14:08.465273+00:00 [running]> on host ff28e221a21a
+[2025-11-21T08:14:32.992+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='load_email_thread_data' AIRFLOW_CTX_TASK_ID='load_email_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-21T08:14:08.465273+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-21T08:14:08.465273+00:00'
+[2025-11-21T08:14:33.001+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-11-21T08:14:47.905+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-11-21T08:14:47.914+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-11-21T08:14:47.953+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=load_email_thread_data, task_id=load_email_data, execution_date=20251121T081408, start_date=20251121T081428, end_date=20251121T081447
+[2025-11-21T08:14:48.213+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-11-21T08:14:48.292+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-21T08:14:48.318+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
